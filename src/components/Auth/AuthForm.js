@@ -1,10 +1,12 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useContext } from 'react';
 
 import classes from './AuthForm.module.css';
+import AuthContext from '../../store/auth-context';
 
 const AuthForm = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
+  const AuthCtx = useContext(AuthContext);
 
   const emailInputRef = useRef();
   const passInputRef = useRef();
@@ -17,12 +19,14 @@ const AuthForm = () => {
     e.preventDefault();
 
     const enteredEmail = emailInputRef.current.value;
-    const enteredPassword = passInputRef.current.value;
+    // const enteredPassword = passInputRef.current.value;
 
     setIsLoading(true);
     if (isLogin) {
       setTimeout(() => {
+        let res = {token: "this will get from backend api"};
         alert(`${enteredEmail} is loggedIn`)
+        AuthCtx.login(res.token);
         setIsLoading(false);
       }, 500);
     } else {

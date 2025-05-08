@@ -17,7 +17,7 @@ const ProfileForm = () => {
     <form className={classes.form} onSubmit={submitHandler}>
       <div className={classes.control}>
         <label htmlFor='new-password'>New Password</label>
-        <input type='password' id='new-password' ref={passRef} required />
+        <input type='password' id='new-password' minLength={7} ref={passRef} required />
       </div>
       <div className={classes.action}>
         {!isLoading ? <button>Change Password</button> : <p>Sending Request...</p>}
