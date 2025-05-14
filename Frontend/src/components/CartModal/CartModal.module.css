@@ -1,0 +1,34 @@
+.modal {
+    position: fixed;
+    top: 20%;
+    right: 30%;
+    width: 40%;
+    background-color: white;
+    border: 2px solid #ccc;
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+  }
+  
+  .modal h2 {
+    margin-top: 0;
+  }
+  
+  .modal button {
+    margin: 10px 10px 0 0;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .orderBtn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .cancelBtn {
+    background-color: #dc3545;
+    color: white;
+  }
+  

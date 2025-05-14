@@ -1,0 +1,14 @@
+.cartButton {
+    float: right;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .cartButton:hover {
+    background-color: #e68a00;
+  }
+  
